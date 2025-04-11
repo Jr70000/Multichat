@@ -3,14 +3,13 @@ import 'package:flutter/material.dart';
 class NavigationService {
   final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
   final GlobalKey<ScaffoldMessengerState> snackBarKey =
-      GlobalKey<ScaffoldMessengerState>();
+  GlobalKey<ScaffoldMessengerState>();
+
 
   Future<dynamic> navigateToWidget(Widget route) {
     final context = navigatorKey.currentContext;
     if (context != null) {
-      return Navigator.of(
-        context,
-      ).push(MaterialPageRoute(builder: (_) => route));
+      return Navigator.of(context).push(MaterialPageRoute(builder: (_)=> route));
     }
     throw Exception("Navigator context is null");
   }
@@ -18,9 +17,7 @@ class NavigationService {
   Future<dynamic> navigateToReplaceWidget(Widget route) {
     final context = navigatorKey.currentContext;
     if (context != null) {
-      return Navigator.of(
-        context,
-      ).pushReplacement(MaterialPageRoute(builder: (_) => route));
+      return Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_)=> route));
     }
     throw Exception("Navigator context is null");
   }
@@ -32,6 +29,7 @@ class NavigationService {
   //   }
   //   throw Exception("Navigator context is null");
   // }
+
 
   void goBack() {
     final context = navigatorKey.currentContext;
