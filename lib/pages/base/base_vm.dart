@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
-import '../../locator.dart';
-import '../../services/navigation_service.dart';
+import '../../data/services/navigation_service.dart';
 
 class BaseViewModel extends ChangeNotifier {
   String? errorMessage;

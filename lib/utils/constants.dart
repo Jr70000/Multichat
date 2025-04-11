@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../data/services/navigation_services.dart';
+import '../data/services/navigation_service.dart';
 import '../locator.dart';
 
 final NavigationService navigationService = getIt<NavigationService>();
