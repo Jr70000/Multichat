@@ -53,7 +53,7 @@ class _BaseViewState<T extends BaseViewModel> extends State<BaseView<T>> {
         builder:
             (_, model, __) => Stack(
               children: [
-                widget.builder!.call(_, model, __),
+                widget.builder!.call(context, model, __),
                 widget.notDefaultLoading
                     ? 0.0.sbH
                     : model.isLoading
